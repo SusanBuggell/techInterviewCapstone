@@ -20,29 +20,29 @@ app.get('/', (req,res) =>{
   console.log('Index page hit successfully.')
 });
 
-app.get('/api/meditation', (req, res) => {
+app.get('/meditation', (req, res) => {
     res.sendFile(__dirname + '/meditation.html')
   console.log('Meditation page hit successfully.')
 });
 
-app.get('/api/yoga', (req, res) => {
+app.get('/yoga', (req, res) => {
     res.sendFile(__dirname + '/yoga.html')
   console.log('Yoga page hit successfully.')
 });
 
-app.get('/api/movement-exercise', (req, res) => {
+app.get('/movement-exercise', (req, res) => {
     res.sendFile(__dirname + '/moveExercise.html')
   console.log('Movement and exercise page hit successfully.')
 });
 
-app.post("/api/addEventToCart/:id", (req, res) => {
+app.post("/addEventToCart/:id", (req, res) => {
   console.log(req.body);
   const { eventId } = req.body;
   console.log(`Event ID app.post: ${eventId}`);
   }
 )
 
- app.delete("/api/deleteEventFromCart/:id", (req,res)=>{
+ app.delete("/deleteEventFromCart/:id", (req,res)=>{
    console.log(req.body)
    const { eventId } = req.body;
    console.log(`Event ID app.delete: ${eventId}`) 
