@@ -13,7 +13,7 @@
                         "country":"USA"
                     },
                 "price":"$500",
-                "imgSrc":"/Users/susanbuggell/Desktop/BrightPaths/FoundationsCapstone/client/Credits/SrcImages/exer-beg.jpeg"  
+                "imgSrc":"/Users/susanbuggell/Desktop/capstone/public/images/exer-beg.jpeg"  
             },
             
     "Event6":
@@ -30,6 +30,23 @@
                         "country":"USA"
                     },
                 "price":"$500",
-                "imgSrc":"/Users/susanbuggell/Desktop/BrightPaths/FoundationsCapstone/client/Credits/SrcImages/exer-adv.jpeg"  
+                "imgSrc":"/Users/susanbuggell/Desktop/capstone/public/images/exer-adv.jpeg"  
+            },
+            "Event9":
+            {
+                "eventId":9,
+                "productName":"Physical Fitness for Couples",
+                "productDesc":"For those couples looking to push and support each other to achieve their fitness goals. Previous exercise experience not required, but may be helpful.",
+                "level":"Beginner/Intermediate",
+                "dates":"29 April - 2 May 2022",
+                "location":
+                    {
+                        "locDesc":"North Country Trail", 
+                        "state": "NY, PA, VT", 
+                        "country":"USA"
+                    },
+                "price":"$500",
+                "imgSrc":"/Users/susanbuggell/Desktop/capstone/public/images/exer-couple.jpeg"  
             }
+
 }

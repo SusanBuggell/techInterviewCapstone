@@ -12,14 +12,14 @@
                         "country":"USA"
                     },
                 "price":"$250",
-                "imgSrc":"/Users/susanbuggell/Desktop/BrightPaths/FoundationsCapstone/client/Credits/SrcImages/yoga-tree.jpeg"
+                "imgSrc":"/Users/susanbuggell/Desktop/capstone/public/images/yoga-tree.jpeg"
             },
 
     "Event4":
             {
                 "eventId":4,
                 "productName":"Yoga for balance and flexibility",
-                "productDesc":"For those looking to deepen their yoga practice and improve their flexibility. Spend 4 days and 3 nights communing with nature and finding your center. Previous yoga experience required.",
+                "productDesc":"For those looking to deepen their yoga practice and improve their flexibility. Spend time communing with nature and finding your center. Previous yoga experience required.",
                 "level":"Intermediate",
                 "dates":"27-30 May 2022",
                 "location":
@@ -29,6 +29,22 @@
                         "country":"USA"
                     },
                 "price":"$500",
-                "imgSrc":"/Users/susanbuggell/Desktop/BrightPaths/FoundationsCapstone/client/Credits/SrcImages/yoga-dancer.jpeg"
+                "imgSrc":"/Users/susanbuggell/Desktop/capstone/public/images/yoga-dancer.jpeg"
+            },
+    "Event8":
+            {
+                "eventId":8,
+                "productName":"Yoga for couples",
+                "productDesc":"For those couples looking to deepen their yoga practice while learning and growing together. Previous yoga experience may be helpful, but is not required.",
+                "level":"Beginner/Intermediate",
+                "dates":"15-18 April 2022",
+                "location":
+                    {
+                        "locDesc":"Kaloko-Honokōhau", 
+                        "state":"Hawaii", 
+                        "country":"USA"
+                    },
+                "price":"$1200/couple",
+                "imgSrc":"/Users/susanbuggell/Desktop/capstone/public/images/yoga-dancer.jpeg"
             }
 }
