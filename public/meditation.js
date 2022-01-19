@@ -8,6 +8,5 @@ console.log('meditationProducts.data')
 
 
 handlerAddEventToCard()
-
-formRegEvent1.addEventListener('submit', handlerRegEvent1)
-// formCanEvent1.addEventListener('submit', handlerCanEvent1)
+btnAddMedEvent1.addEventListener('click',<insert function></insert>)
+btnAddMedEvent2.addEventListener
