@@ -1,0 +1,46 @@
+body >header{
+  font-family: 'Quintessential', cursive;
+  line-height:20vh;
+  font-size: 10vh;
+
+  color:floralwhite;
+  text-shadow: 2px 2px royalblue;
+  /* stroke:mediumblue;
+  stroke-width: 3px; */
+  background-image: url(../public/purple-swirl.jpeg);
+  opacity: 85%;
+}
+
+h1{
+  font-size:5vh;
+}
+
+.flex-container {
+  flex-direction:row;
+  display:flex;
+  background-color: floralwhite;
+  margin: 20px;
+  justify-content: center;
+}
+
+.flex-container>.flex-item > h2{
+  font-size:3vh;
+}
+.flex-item img {
+  display:flexbox;
+  padding: 15px 15px;
+  width: 30vw;
+  height: 50vh;
+  border-radius: 20px;
+  
+}
+
+.flex-item>h3{
+
+  padding: 10px 7.5px; 
+  width: 10vw;
+  text-align: center;
+  border-radius: 20px;
+  background-color:royalblue;
+  color:floralwhite;
+}

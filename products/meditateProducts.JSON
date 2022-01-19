@@ -1,0 +1,35 @@
+{
+    "Event1":
+            {
+                "eventId":1,
+                "productName":"Meditation for Beginners",
+                "productDesc":"For those looking to have their first meditation experience. No previous experience required.",
+                "level":"Beginners",
+                "dates":"1-4 July 2022",
+                "location":
+                    {
+                        "locDesc":"Santa Fe National Forest", 
+                        "state":"New Mexico", 
+                        "country":"USA"
+                    },
+                "price":"$300",
+                "imgSrc":"/Users/susanbuggell/Desktop/BrightPaths/FoundationsCapstone/client/Credits/SrcImages/med-beginner.jpeg"  
+            },
+    "Event2":
+            {   
+                "eventId":2,
+                "productName":"Meditation for Stress Relief",
+                "productDesc":"For those looking to find ways of letting go of their stress and finding a path to inner peace. Previous exerience may be beneficial, however, is not required.",
+                "level":"Beginner/Intermediate",
+                "dates":"11-14 November 2022",
+                "location":
+                    {
+                        "locDesc":"Cathedral Rock Trailhead", 
+                        "state":"Arizona", 
+                        "country":"USA"
+                    },
+                "price":"$300",
+                "imgSrc":"/Users/susanbuggell/Desktop/BrightPaths/FoundationsCapstone/client/Credits/SrcImages/med-stress.jpeg"  
+            }
+
+}

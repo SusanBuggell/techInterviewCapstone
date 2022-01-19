@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Self-Care Sanctuary</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" integrity="sha512-IJEbgDEF7OeKJRa0MY2PApnyJHRIsgzCveek4ec8VWQ+7KG3ZSKVNYa5xP/Gh0hVP0Mwb+gBsk+GwR3JQGhQNg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" type="text/css" href="/public/styles.css"/>
+</head>
+<body>
+  <header>
+    Self-Care Sanctuary
+  </header>
+  <h2>Welcome to the Self-Care Sanctuary.  We are here to aid you along your journey to improving the quality of your life with options to meet you where you are.  Please select a catgory to receive curated events.</h2>
+  <container class="flex-container">
+      <prod-card class="flex-item">
+        <a href="http://localhost:3000/api/meditation">
+          <img src="./public/cat-meditation.jpeg"/>
+          <button type="submit" class="button" id="btn-cat-meditation"><h3>Meditation</h3></button>
+        </a>
+      </prod-card>
+      <prod-card class="flex-item">
+        <a href="http://localhost:3000/api/yoga">
+          <img src="./public/cat-yoga.jpeg"/><button type="submit" class="button" id="btn-cat-yoga"><h3>Yoga</h3></button>
+        </a>
+      </prod-card>
+      <prod-card class="flex-item">
+        <a href="http://localhost:3000/api/movement-exercise">
+        <img src="./public/cat-movement-exercise.jpeg"/>
+        <button type="submit" class="button" id="btn-cat-movement-exercise"><h3>Movement & Exercise</h3></button>
+      </a>  
+      </prod-card>
+      
+    </container>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./index.js"> </script>
+</body>
+</html>

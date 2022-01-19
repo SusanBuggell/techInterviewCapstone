@@ -1,0 +1,34 @@
+{
+    "Event3":
+            {
+                "eventId":3,
+                "productName":"Yoga by Sunset",
+                "productDesc":"Learn to let your stress drift away with the setting sun. No previous experience required. Inclusive of those with injuries or limitations.",
+                "level":"Beginner",
+                "dates":"22-24 April 2022",
+                "location":
+                    {"locDesc":"Over-looking Grand Canyon National Park", 
+                        "state":"Arizona", 
+                        "country":"USA"
+                    },
+                "price":"$250",
+                "imgSrc":"/Users/susanbuggell/Desktop/BrightPaths/FoundationsCapstone/client/Credits/SrcImages/yoga-tree.jpeg"
+            },
+
+    "Event4":
+            {
+                "eventId":4,
+                "productName":"Yoga for balance and flexibility",
+                "productDesc":"For those looking to deepen their yoga practice and improve their flexibility. Spend 4 days and 3 nights communing with nature and finding your center. Previous yoga experience required.",
+                "level":"Intermediate",
+                "dates":"27-30 May 2022",
+                "location":
+                    {
+                        "locDesc":"Golden Gate Park", 
+                        "state":"California", 
+                        "country":"USA"
+                    },
+                "price":"$500",
+                "imgSrc":"/Users/susanbuggell/Desktop/BrightPaths/FoundationsCapstone/client/Credits/SrcImages/yoga-dancer.jpeg"
+            }
+}
