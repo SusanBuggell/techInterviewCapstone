@@ -7,7 +7,7 @@ body >header{
   text-shadow: 2px 2px royalblue;
   /* stroke:mediumblue;
   stroke-width: 3px; */
-  background-image: url(../public/purple-swirl.jpeg);
+  background-image: url(../public/images/purple-swirl.jpeg);
   opacity: 85%;
 }
 
