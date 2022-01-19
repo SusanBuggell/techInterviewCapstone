@@ -30,7 +30,7 @@ app.get('/yoga', (req, res) => {
   console.log('Yoga page hit successfully.')
 });
 
-app.get('/movement-exercise', (req, res) => {
+app.get('/exercise', (req, res) => {
     res.sendFile(__dirname + '/exercise.html')
   console.log('Movement and exercise page hit successfully.')
 });
