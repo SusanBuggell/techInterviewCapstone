@@ -40,19 +40,15 @@ app.get('/cart', (req, res) => {
 console.log('Shopping cart page hit successfully.')
 }); 
 
+app.post("/cart", (req, res) => {
+ res.send('Cart add hit successfully.')
 
-
-app.post("/addEventToCart/:id", (req, res) => {
-  console.log(req.body);
-  const { eventId } = req.body;
-  console.log(`Event ID app.post: ${eventId}`);
   }
 )
 
- app.delete("/deleteEventFromCart/:id", (req,res)=>{
-   console.log(req.body)
-   const { eventId } = req.body;
-   console.log(`Event ID app.delete: ${eventId}`) 
+ app.post("/cart", (req,res)=>{
+  res.send('Cart remove hit successfully.')
+
    }
  )
 

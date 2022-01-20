@@ -1,3 +1,5 @@
+const { add } = require("nodemon/lib/rules")
+
 let events = []
 
 axios.get('./public/products/meditationProducts.JSON')
@@ -38,6 +40,16 @@ axios.get('./public/products/meditationProducts.JSON')
     let productPrice = document.createElement('p')
     productPrice.innerHTML = value.price
     descriptionContainer.append(productPrice)
+
+    // //add to cart
+    // let addToCart = document.createElement('button')
+    // addToCart.setAttribute("class", "btn btn-info")
+    // addToCart.setAttribute("type", "button")
+    // addToCart.setAttribute("id", "btn-add-cart")
+    // addToCart.setAttribute("href", "http://localhost:3000/addToCart")
+    // addToCart.innerText = "Purchase"
+    // productContainer.append(addToCart)
+
   }
 
 
