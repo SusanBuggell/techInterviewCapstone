@@ -12,7 +12,7 @@
                         "country":"USA"
                     },
                 "price":"$250",
-                "imgSrc":"/Users/susanbuggell/Desktop/capstone/public/images/yoga-tree.jpeg"
+                "imgSrc":"/public/images/yoga-tree.jpeg"
             },
 
     "Event4":
@@ -29,7 +29,7 @@
                         "country":"USA"
                     },
                 "price":"$500",
-                "imgSrc":"/Users/susanbuggell/Desktop/capstone/public/images/yoga-dancer.jpeg"
+                "imgSrc":"/public/images/yoga-dancer.jpeg"
             },
     "Event8":
             {
@@ -45,6 +45,6 @@
                         "country":"USA"
                     },
                 "price":"$1200/couple",
-                "imgSrc":"/Users/susanbuggell/Desktop/capstone/public/images/yoga-partner.jpeg"
+                "imgSrc":"/public/images/yoga-partner.jpeg"
             }
 }

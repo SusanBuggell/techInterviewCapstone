@@ -13,7 +13,7 @@
                         "country":"USA"
                     },
                 "price":"$300",
-                "imgSrc":"/Users/susanbuggell/Desktop/capstone/public/images/med-beginner.jpeg"  
+                "imgSrc":"/public/images/med-beginner.jpeg"  
             },
     "Event2":
             {   
@@ -29,7 +29,7 @@
                         "country":"USA"
                     },
                 "price":"$300",
-                "imgSrc":"/Users/susanbuggell/Desktop/capstone/public/images/med-stress.jpeg"  
+                "imgSrc":"/public/images/med-stress.jpeg"  
             },
             "Event7":
             {   
@@ -45,7 +45,7 @@
                         "country":"USA"
                     },
                 "price":"$600/couple",
-                "imgSrc":"/Users/susanbuggell/Desktop/capstone/public/images/med-partner.jpeg"  
+                "imgSrc":"/public/images/med-partner.jpeg"  
             }
 
 }

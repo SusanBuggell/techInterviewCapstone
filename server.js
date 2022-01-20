@@ -35,6 +35,13 @@ app.get('/exercise', (req, res) => {
   console.log('Movement and exercise page hit successfully.')
 });
 
+app.get('/cart', (req, res) => {
+  res.sendFile(__dirname + '/cart.html')
+console.log('Shopping cart page hit successfully.')
+}); 
+
+
+
 app.post("/addEventToCart/:id", (req, res) => {
   console.log(req.body);
   const { eventId } = req.body;

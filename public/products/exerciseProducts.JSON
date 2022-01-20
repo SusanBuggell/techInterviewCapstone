@@ -13,7 +13,7 @@
                         "country":"USA"
                     },
                 "price":"$500",
-                "imgSrc":"/Users/susanbuggell/Desktop/capstone/public/images/exer-beg.jpeg"  
+                "imgSrc":"/public/images/exer-beg.jpeg"  
             },
             
     "Event6":
@@ -30,7 +30,7 @@
                         "country":"USA"
                     },
                 "price":"$500",
-                "imgSrc":"/Users/susanbuggell/Desktop/capstone/public/images/exer-adv.jpeg"  
+                "imgSrc":"/public/images/exer-adv.jpeg"  
             },
             "Event9":
             {
@@ -46,7 +46,7 @@
                         "country":"USA"
                     },
                 "price":"$500",
-                "imgSrc":"/Users/susanbuggell/Desktop/capstone/public/images/exer-couple.jpeg"  
+                "imgSrc":"/public/images/exer-couple.jpeg"  
             }
 
 }
