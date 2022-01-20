@@ -24,7 +24,7 @@ axios.get('./public/products/yogaProducts.JSON')
 
     //add product description
     let descriptionContainer = document.createElement('div')
-    descriptionContainer.setAttribute("id", "productDescriptionContainer",id="productContainer")
+    descriptionContainer.setAttribute("id", "productDescriptionContainer")
     productContainer.append(descriptionContainer)
 
     //descrip
@@ -38,18 +38,19 @@ axios.get('./public/products/yogaProducts.JSON')
     descriptionContainer.append(productPrice)
 
 
-    //add to cart
-    let addToCart = document.createElement('button')
-    addToCart.setAttribute("class", "btn btn-info")
-    addToCart.setAttribute("type", "button")
-    addToCart.setAttribute("id", "btn-add-cart")
-    addToCart.setAttribute("href", "http://localhost:3000/cart")  
-    addToCart.onclick = function(){
-    axios.post('http://localhost:3000/addtocart', {item:value.productName, amount:value.cartPrice})
+      //add to cart
+      let addToCart = document.createElement('button')
+      addToCart.setAttribute("class", "btn btn-info")
+      addToCart.setAttribute("type", "button")
+      addToCart.setAttribute("id", "btn-add-cart")
+      addToCart.setAttribute("href", "http://localhost:3000/cart")  
+      addToCart.onclick = function(){
+      axios.post('http://localhost:3000/addtocart', {item:value.productName, amount:value.cartPrice})
+      }
+      addToCart.innerText = "Purchase"
+      productContainer.append(addToCart)
+     
     }
-    addToCart.innerText = "Purchase"
-    productContainer.append(addToCart)
-     }
 })
 
 .catch(err => console.log(err))
