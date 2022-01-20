@@ -41,6 +41,16 @@ h1{
   margin: 0 auto;
   border: 1px solid orange;
 }
+ #nav{
+  background-color: darkcyan; 
+  flex-direction:row;
+  justify-content: space-evenly
+} 
+#nav>a{
+  font-size: 2vh;
+  font-family: 'Quintessential', cursive;
+  color:floralwhite;
+}
 
 .flex-container {
   flex-direction:row;
