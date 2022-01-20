@@ -51,6 +51,10 @@ h1{
   font-family: 'Quintessential', cursive;
   color:floralwhite;
 }
+#cartHeadings>.flex-item{
+  flex-direction:row;
+  justify-content: space-evenly
+}
 /* #formCreateUser> .flex-item{
   display:flex;
   flex-direction:column;

@@ -1,5 +1,9 @@
-
-
+for(
+  axios.get("http://localhost:3000/addtocart"
+  || "http://localhost:3000/removefromcart")
+  .then(res => {
+    let data = res.data
+    
     //create multi product container
     let container = document.getElementById('productContainer')
     let productContainer = document.createElement('div')
@@ -13,42 +17,27 @@
     title.innerHTML = value.productName
     productContainer.append(title)
 
-    //fill container with image
-    let Image = document.createElement('img')
-    Image.setAttribute("id", "productImage")
-    Image.setAttribute("src", value.imgSrc)
-    productContainer.append(Image)
-
-    //add product description
-    let descriptionContainer = document.createElement('div')
-    descriptionContainer.setAttribute("id", "productDescriptionContainer")
-    productContainer.append(descriptionContainer)
-
-    //descrip
-    let verbiage = document.createElement('p')
-    verbiage.innerHTML = value.productDesc
-    descriptionContainer.append(verbiage)
-
     //price
     let productPrice = document.createElement('p')
-    productPrice.innerHTML = value.price
+    productPrice.innerHTML = value.cartPrice
     descriptionContainer.append(productPrice)
 
-    //add to cart
-    let addToCart = document.createElement('button')
-    addToCart.setAttribute("class", "btn btn-info")
-    addToCart.setAttribute("type", "button")
-    addToCart.setAttribute("id", "btn-add-cart")
-    addToCart.setAttribute("href", "http://localhost:3000/addtocart")
-    addToCart.onclick = function(){
-      axios.post('http://localhost:3000/addtocart', {item:value.productName, amount:value.cartPrice})
+    //remove from cart
+    let removeFromCart = document.createElement('button')
+    removeFromCart.setAttribute("class", "btn btn-info")
+    removeFromCart.setAttribute("type", "button")
+    removeFromCart.setAttribute("id", "btn-remove-cart")
+    removeFromCart.setAttribute("href", "http://localhost:3000/removefromcart")
+    removeFromCart.onclick = function(){
+      axios.post('http://localhost:3000/removefromcart', {item:value.productName, amount:value.cartPrice})
     }
-    addToCart.innerText = "Purchase"
+    removeFromCart.innerText = "Cancel"
 
-    productContainer.append(addToCart)
+    productContainer.append(removeFromCart)
+  }
+    
+  )
 
 
-
-
-})
 .catch(err => console.log(err))
+)
