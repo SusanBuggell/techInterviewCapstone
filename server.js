@@ -40,13 +40,13 @@ app.get('/cart', (req, res) => {
 console.log('Shopping cart page hit successfully.')
 }); 
 
-app.post("/cart", (req, res) => {
+app.post("/addtocart", (req, res) => {
  res.send('Cart add hit successfully.')
 
   }
 )
 
- app.post("/cart", (req,res)=>{
+app.post("/removefromcart", (req,res)=>{
   res.send('Cart remove hit successfully.')
 
    }
