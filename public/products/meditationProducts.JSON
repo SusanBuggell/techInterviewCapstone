@@ -13,6 +13,7 @@
                         "country":"USA"
                     },
                 "price":"$300",
+                "cartPrice": "300",
                 "imgSrc":"/public/images/med-beginner.jpeg"  
             },
     "Event2":
@@ -29,6 +30,7 @@
                         "country":"USA"
                     },
                 "price":"$300",
+                "cartPrice":"300",
                 "imgSrc":"/public/images/med-stress.jpeg"  
             },
             "Event7":
@@ -45,6 +47,7 @@
                         "country":"USA"
                     },
                 "price":"$600/couple",
+                "cartPrice":"600",
                 "imgSrc":"/public/images/med-partner.jpeg"  
             }
 

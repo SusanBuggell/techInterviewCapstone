@@ -36,9 +36,20 @@ axios.get('./public/products/yogaProducts.JSON')
     let productPrice = document.createElement('p')
     productPrice.innerHTML = value.price
     descriptionContainer.append(productPrice)
-  }
 
 
+    //add to cart
+    let addToCart = document.createElement('button')
+    addToCart.setAttribute("class", "btn btn-info")
+    addToCart.setAttribute("type", "button")
+    addToCart.setAttribute("id", "btn-add-cart")
+    addToCart.setAttribute("href", "http://localhost:3000/cart")  
+    addToCart.onclick = function(){
+    axios.post('http://localhost:3000/addtocart', {item:value.productName, amount:value.cartPrice})
+    }
+    addToCart.innerText = "Purchase"
+    productContainer.append(addToCart)
+     }
 })
 
 .catch(err => console.log(err))

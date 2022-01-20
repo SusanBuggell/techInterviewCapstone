@@ -49,7 +49,7 @@ app.post("/addtocart", (req, res) => {
  const amount = req.body.amount
  const item = req.body.item
  total += parseInt(amount)
- console.log(total)
+ console.log(item +total)
   }
 )
 

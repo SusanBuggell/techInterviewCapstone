@@ -13,6 +13,7 @@
                         "country":"USA"
                     },
                 "price":"$500",
+                "cartPrice": "500",
                 "imgSrc":"/public/images/exer-beg.jpeg"  
             },
             
@@ -30,6 +31,7 @@
                         "country":"USA"
                     },
                 "price":"$500",
+                "cartPrice":"500",
                 "imgSrc":"/public/images/exer-adv.jpeg"  
             },
             "Event9":
@@ -46,6 +48,7 @@
                         "country":"USA"
                     },
                 "price":"$500",
+                "cartPrice": "500",
                 "imgSrc":"/public/images/exer-couple.jpeg"  
             }
 

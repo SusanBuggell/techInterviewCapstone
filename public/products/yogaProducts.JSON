@@ -12,6 +12,7 @@
                         "country":"USA"
                     },
                 "price":"$250",
+                "cartPrice:":"250",
                 "imgSrc":"/public/images/yoga-tree.jpeg"
             },
 
@@ -29,6 +30,7 @@
                         "country":"USA"
                     },
                 "price":"$500",
+                "cartPrice": "500",
                 "imgSrc":"/public/images/yoga-dancer.jpeg"
             },
     "Event8":
@@ -45,6 +47,7 @@
                         "country":"USA"
                     },
                 "price":"$1200/couple",
+                "cartPrice": "1200",
                 "imgSrc":"/public/images/yoga-partner.jpeg"
             }
 }
