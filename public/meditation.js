@@ -1,5 +1,3 @@
-const { add } = require("nodemon/lib/rules")
-
 let events = []
 
 axios.get('./public/products/meditationProducts.JSON')
