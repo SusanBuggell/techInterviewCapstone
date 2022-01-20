@@ -11,6 +11,10 @@ app.use('/public', express.static('public'));
 // app.use(express.static('client'));
 // app.use(express.static(path.join(__dirname, 'client/index.html')))
 
+total = 0
+cartItems = []
+returnedTotal = cartItems.toString(total)
+
 //send back root domain .html file
 
 app.get('/', (req,res) =>{
