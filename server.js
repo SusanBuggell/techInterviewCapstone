@@ -13,7 +13,7 @@ app.use('/public', express.static('public'));
 
 let total = 0
 let cartItems = []
-let returnedTotal = cartItems.toString(total)
+let returnedTotal = toString(total)
 
 //send back root domain .html file
 
@@ -46,15 +46,15 @@ console.log('Shopping cart page hit successfully.')
 
 app.post("/addtocart", (req, res) => {
  res.send('Cart add hit successfully.')
-  itemAdd=req.body.productDesc
-  amountAdd=req.body.price
+  const itemAdd=req.body.productDesc
+  const amountAdd=req.body.price
   }
 )
 
 app.post("/removefromcart", (req,res)=>{
   res.send('Cart remove hit successfully.')
-  itemRemove=req.body.productDesc
-  amountRemove=req.body.price
+  const itemRemove=req.body.productDesc
+  const amountRemove=req.body.price
    }
  )
 
