@@ -46,15 +46,17 @@ console.log('Shopping cart page hit successfully.')
 
 app.post("/addtocart", (req, res) => {
  res.send('Cart add hit successfully.')
-  const itemAdd=req.body.productDesc
-  const amountAdd=req.body.price
+ const amount = req.body.amount
+ const item = req.body.item
+ total += parseInt(amount)
   }
 )
 
 app.post("/removefromcart", (req,res)=>{
   res.send('Cart remove hit successfully.')
-  const itemRemove=req.body.productDesc
-  const amountRemove=req.body.price
+  const amount = req.body.amount
+  const item = req.body.item
+  total -= parseInt(amount)
    }
  )
 
