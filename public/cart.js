@@ -55,5 +55,6 @@ axios.get("http://localhost:3000/getcart")
   })
 function test (){
   axios.get("http://localhost:3000/checkout")
-  axios.get("http://localhost:3000/confirmation")
+  document.getElementById("modal-body").style.display = "none"
+  document.getElementById("confirmation-body").style.display = "block"
 }

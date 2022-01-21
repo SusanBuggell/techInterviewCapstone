@@ -36,7 +36,7 @@ h1{
 }
 
 #productDescriptionContainer {
-  height: 100px;
+  height: 250px;
   width: 90%;
   margin: 0 auto;
   border: 1px solid orange;
@@ -123,4 +123,7 @@ h1{
   display: flex;
   justify-content: center;
   margin-top: 30%;
+}
+#confirmation-body{
+  display:none;
 }
