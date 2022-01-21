@@ -13,6 +13,7 @@ axios.get('./public/products/meditationProducts.JSON')
 
     //add title
     let title = document.createElement('p')
+    title.setAttribute("id","title")
     title.innerHTML = value.productName
     productContainer.append(title)
 

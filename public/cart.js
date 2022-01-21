@@ -3,7 +3,7 @@ axios.get("http://localhost:3000/getcart")
     const response = res.data
     const total = res.data.total
 
-    if(response === 'No items in cart'){
+    if(response === 'Your cart is currently empty'){
       const response = res.data
       console.log(response)
       const container=document.getElementById("noitems")
@@ -12,7 +12,7 @@ axios.get("http://localhost:3000/getcart")
       container.appendChild(noitems)
     } else {
       const data = res.data.cartItems
-      res.data.cartItems.map(data => {
+      data.map(data => {
         const titleContainer=document.getElementById("title")
         const priceContainer=document.getElementById("price")
 
@@ -20,12 +20,12 @@ axios.get("http://localhost:3000/getcart")
         title.innerHTML= data.item
         titleContainer.appendChild(title)
         let price = document.createElement("p")
-        price.innerHTML= data.amount
+        price.innerHTML= `$${data.amount}`
         priceContainer.appendChild(price)
       })
       const container=document.getElementById("total")
       let total = document.createElement("p")
-      total.innerHTML= res.data.total
+      total.innerHTML= `$${res.data.total}`
       container.appendChild(total)
       const checkoutContainer=document.getElementById("checkout")
           let checkout = document.createElement('button')

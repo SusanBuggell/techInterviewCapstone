@@ -1,14 +1,17 @@
+body{
+  background-color: lightblue;
+}
+
 body >header{
   font-family: 'Quintessential', cursive;
   line-height:20vh;
   font-size: 10vh;
   color:floralwhite;
   text-shadow: 2px 2px royalblue;
-  
-
   background-image: url(../public/images/purple-swirl.jpeg);
   opacity: 85%;
 }
+
 button{
   font-weight: lighter;
   font-size: medium;
@@ -16,20 +19,27 @@ button{
 
 h1{
   font-size:5vh;
-  font-family: 'Quintessential', cursive;
+  text-align: center;
+  /* font-family: 'Quintessential', cursive; */
 }
 h2{
-  font-family: 'Quintessential', cursive;
+  /* font-family: 'Quintessential', cursive; */
   margin-right: 5vw;
   margin-left: 5vw;
+  text-align:center;
 }
 h3{
-  font-family: 'Quintessential', cursive;
+  /* font-family: 'Quintessential', cursive; */
+  margin:20px;
+  text-align: center;
 }
+h4{
+  text-align: center;
+}
+
 #productContainer {
-  font-size: larger;
-  width: 100vw;
-  height: 100vh;
+  width: 95%;
+  height: 95%;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -40,7 +50,7 @@ h3{
   font-size: larger;
   width: 30%;
   height: 300px;
-  font-family: 'Quintessential', cursive;
+  /* font-family: 'Quintessential', cursive; */
 }
 
 #productImage {
@@ -53,18 +63,18 @@ h3{
   height: 250px;
   width: 90%;
   margin: 0 auto;
-  font-family: 'Quintessential', cursive;
+  /* font-family: 'Quintessential', cursive; */
 }
 #nav{
   background-color: darkcyan; 
   flex-direction:row;
   justify-content: space-evenly;
-  width:100vw;
+  width:100%;
   margin:0 auto;
 } 
 #nav>a{
   font-size: 3vh;
-  font-family: 'Quintessential', cursive;
+  /* font-family: 'Quintessential', cursive; */
   color:floralwhite;
 }
 #cartHeadings>.flex-item{
@@ -112,14 +122,16 @@ button{
 text-align: center;
 }
 #cartItems{
+  font-size: x-large;
   display: flex;
   flex-direction: row;
   justify-content:space-between;
-  margin:0 auto;
+  margin:auto;
   padding: 15px;
 }
 #price{
-  margin-right: 25%;
+  margin-right: 20%;
+  text-align:end;
 }
 
 #noitems{
@@ -129,14 +141,15 @@ text-align: center;
 }
 
 #total{
+  font-size:xx-large;
   height:50px;
   width: 90%;
-  margin-left: 5%;
+  margin-left: 25%;
   /* margin-right:40%; */
   padding-right:22%;
   display: flex;
   flex-direction: row;
-  justify-content:space-between;
+  justify-content:space-evenly;
 }
 
 #checkout{
