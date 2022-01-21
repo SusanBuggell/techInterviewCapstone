@@ -48,7 +48,7 @@ app.post("/addtocart", (req, res) => {
  res.send('Cart add hit successfully.')
  const amount = req.body.amount
  const item = req.body.item
- const id = cartItems.length +1
+ const id = cartItems + 1
  total += parseInt(amount)
  cartItems.push({id, item, amount})
  console.log(item + total)
@@ -58,16 +58,17 @@ app.post("/addtocart", (req, res) => {
 
 app.post("/removefromcart", (req,res)=>{
   res.send('Cart remove hit successfully.')
+  const id = req.body.id
   const amount = req.body.amount
-  const item = req.body.item
   total -= parseInt(amount)
   console.log(total)
+  console.log(id, amount)
    }
  )
 
  app.get("/getcart", (req, res)=>{
    res.send(
-     cartItems.length >0? {cartItems}:"No items in cart"
+     cartItems.length > 0 ? {cartItems} : "No items in cart"
    )
  })
 
