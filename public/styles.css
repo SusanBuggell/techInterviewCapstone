@@ -119,3 +119,8 @@ h1{
   width: 100%;
   border:1px solid green;
 }
+#confirmation{
+  display: flex;
+  justify-content: center;
+  margin-top: 30%;
+}

@@ -53,3 +53,7 @@ axios.get("http://localhost:3000/getcart")
             })
     }
   })
+function test (){
+  axios.get("http://localhost:3000/checkout")
+  axios.get("http://localhost:3000/confirmation")
+}
