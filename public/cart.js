@@ -22,7 +22,8 @@ axios.get("http://localhost:3000/getcart")
         let price = document.createElement("p")
         price.innerHTML= `$${data.amount}`
         priceContainer.appendChild(price)
-      })
+
+  })
       const container=document.getElementById("total")
       let total = document.createElement("p")
       total.innerHTML= `$${res.data.total}`

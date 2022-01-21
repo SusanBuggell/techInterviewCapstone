@@ -1,6 +1,5 @@
 const express = require("express");
 const sgMail = require('@sendgrid/mail')
-const axios = require('axios')
 const app = express();
 const port = 3000;
 
@@ -59,16 +58,6 @@ app.post("/addtocart", (req, res) => {
 
   }
 )
-
-app.post("/removefromcart", (req,res)=>{
-  res.send('Cart remove hit successfully.')
-  const id = req.body.id
-  const amount = req.body.amount
-  total -= parseInt(amount)
-  console.log(total)
-  console.log(id, amount)
-   }
- )
 
  app.get("/getcart", (req, res)=>{
    res.send(
