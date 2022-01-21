@@ -1,43 +1,27 @@
-for(
-  axios.get("http://localhost:3000/addtocart"
-  || "http://localhost:3000/removefromcart")
+axios.get("http://localhost:3000/getcart")
   .then(res => {
-    let data = res.data
-    
-    //create multi product container
-    let container = document.getElementById('productContainer')
-    let productContainer = document.createElement('div')
+    const response = res.data
+    if(response === 'No items in cart'){
+      const response = res.data
+      console.log(response)
+      const container=document.getElementById("noitems")
+      let noitems = document.createElement("p")
+      noitems.innerHTML= response
+      container.appendChild(noitems)
+    } else {
+      const data = res.data.cartItems
+      res.data.cartItems.map(data => {
+        console.log(data.item)
+        console.log(data.amount)
+        const titleContainer=document.getElementById("title")
+        const priceContainer=document.getElementById("price")
+        let title = document.createElement("p")
+        title.innerHTML= data.item
+        titleContainer.appendChild(title)
+        let price = document.createElement("p")
+        price.innerHTML= data.amount
+        priceContainer.appendChild(price)
 
-    //create container for product
-    productContainer.setAttribute("id", "productDescription")
-    container.appendChild(productContainer)
-
-    //add title
-    let title = document.createElement('h1')
-    title.innerHTML = value.productName
-    productContainer.append(title)
-
-    //price
-    let productPrice = document.createElement('p')
-    productPrice.innerHTML = value.cartPrice
-    descriptionContainer.append(productPrice)
-
-    //remove from cart
-    let removeFromCart = document.createElement('button')
-    removeFromCart.setAttribute("class", "btn btn-info")
-    removeFromCart.setAttribute("type", "button")
-    removeFromCart.setAttribute("id", "btn-remove-cart")
-    removeFromCart.setAttribute("href", "http://localhost:3000/removefromcart")
-    removeFromCart.onclick = function(){
-      axios.post('http://localhost:3000/removefromcart', {item:value.productName, amount:value.cartPrice})
+      })
     }
-    removeFromCart.innerText = "Cancel"
-
-    productContainer.append(removeFromCart)
-  }
-    
-  )
-
-
-.catch(err => console.log(err))
-)
+  })

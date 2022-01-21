@@ -48,8 +48,11 @@ app.post("/addtocart", (req, res) => {
  res.send('Cart add hit successfully.')
  const amount = req.body.amount
  const item = req.body.item
+ const id = cartItems.length +1
  total += parseInt(amount)
- console.log(item +total)
+ cartItems.push({id, item, amount})
+ console.log(item + total)
+
   }
 )
 
@@ -61,6 +64,12 @@ app.post("/removefromcart", (req,res)=>{
   console.log(total)
    }
  )
+
+ app.get("/getcart", (req, res)=>{
+   res.send(
+     cartItems.length >0? {cartItems}:"No items in cart"
+   )
+ })
 
 // start and listen on the Express server
 app.listen(port, () => {
