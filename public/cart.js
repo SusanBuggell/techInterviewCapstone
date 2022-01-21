@@ -1,6 +1,8 @@
 axios.get("http://localhost:3000/getcart")
   .then(res => {
     const response = res.data
+    const total = res.data.total
+
     if(response === 'No items in cart'){
       const response = res.data
       console.log(response)
@@ -13,23 +15,41 @@ axios.get("http://localhost:3000/getcart")
       res.data.cartItems.map(data => {
         const titleContainer=document.getElementById("title")
         const priceContainer=document.getElementById("price")
-        const removeContainer=document.getElementById("remove")
+
         let title = document.createElement("p")
         title.innerHTML= data.item
         titleContainer.appendChild(title)
         let price = document.createElement("p")
         price.innerHTML= data.amount
         priceContainer.appendChild(price)
-  
-    let removeFromCart = document.createElement('button')
-    removeFromCart.setAttribute("class", "btn btn-info")
-    removeFromCart.setAttribute("type", "button")
-    removeFromCart.setAttribute("id", "btn-remove-cart") 
-    removeFromCart.onclick = function(){
-    axios.post('http://localhost:3000/removefromcart', {id:data.id, amount:data.amount})
-    }
-    removeFromCart.innerText = "Remove"
-    removeContainer.append(removeFromCart)
       })
+      const container=document.getElementById("total")
+      let total = document.createElement("p")
+      total.innerHTML= res.data.total
+      container.appendChild(total)
+      const checkoutContainer=document.getElementById("checkout")
+          let checkout = document.createElement('button')
+          checkout.setAttribute("class", "btn btn-primary")
+          checkout.setAttribute("type", "button" )
+          checkout.setAttribute("data-toggle", "modal")
+          checkout.setAttribute("data-target", "#exampleModal")
+          // checkout.onclick = function(){
+          checkout.innerText = "Checkout"
+          checkoutContainer.append(checkout)
+          checkout.onclick = function(){
+            axios.get("http://localhost:3000/getcart")
+            .then(res=>{
+
+              console.log("modal", res.data)
+            })
+            }
+            let modalBody = document.createElement('p')
+            res.data.cartItems.map(data => {
+              const modalContainer=document.getElementById("modal-body")
+      
+              let title = document.createElement("p")
+              title.innerHTML= data.item
+              modalContainer.appendChild(title)
+            })
     }
   })

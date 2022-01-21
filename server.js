@@ -68,7 +68,7 @@ app.post("/removefromcart", (req,res)=>{
 
  app.get("/getcart", (req, res)=>{
    res.send(
-     cartItems.length > 0 ? {cartItems} : "No items in cart"
+     cartItems.length > 0 ? {cartItems,total} : "No items in cart"
    )
  })
 

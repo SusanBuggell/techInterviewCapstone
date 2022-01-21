@@ -107,3 +107,15 @@ h1{
   width: 100%;
   border:1px solid green;
 }
+
+#total{
+  height:50px;
+  width: 100%;
+  border:1px solid green;
+}
+#checkout{
+  margin-top: 50px;
+  height:50px;
+  width: 100%;
+  border:1px solid green;
+}
