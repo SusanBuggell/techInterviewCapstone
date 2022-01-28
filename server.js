@@ -81,7 +81,7 @@ app.post("/addtocart", (req, res) => {
 });
 
 app.post("/createaccount", (req, res) => {
-  res.send('Create account add hit successfully.')
+  res.send('Create account user add hit successfully.')
   const firstName = req.body.firstName
   const lastName= req.body.lastName
   const email=req.body.email
@@ -93,31 +93,31 @@ app.post("/createaccount", (req, res) => {
   const DOB = req.body.DOB
   const gender = req.body.gender
   users.push({firstName,lastName,email,streetAddress,city,stateProvince,country,zipPostalCode,DOB,gender})
-  console.log(users)
+  console.log("users: ",users)
    }
  )
 
-app.get("/checkout", (req, res) =>{
+// app.get("/checkout", (req, res) =>{
     
-  const sgMail = require('@sendgrid/mail')
-    sgMail.setApiKey(process.env.SENDGRID_API_KEY)
-    const msg = {
-      to: 'susan.buggell@gmail.com', // Change to your recipient
-      from: 'sbuggell@gmail.com', // Change to your verified sender
-      subject: 'Self-Care Sanctuary Order Confirmation',
-      text: 'Thank you for your Order',
-      html: 'localhost:3000',
-    }
-    sgMail
-      .send(msg)
-      .then(() => {
-        console.log('Email sent')
-      })
-      .catch((error) => {
-         console.error(error)
-      })
-  // res.send("checkout complete")
- })
+//   const sgMail = require('@sendgrid/mail')
+//     sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+//     const msg = {
+//       to: 'susan.buggell@gmail.com', // Change to your recipient
+//       from: 'sbuggell@gmail.com', // Change to your verified sender
+//       subject: 'Self-Care Sanctuary Order Confirmation',
+//       text: 'Thank you for your Order',
+//       html: 'localhost:3000',
+//     }
+//     sgMail
+//       .send(msg)
+//       .then(() => {
+//         console.log('Email sent')
+//       })
+//       .catch((error) => {
+//          console.error(error)
+//       })
+//   // res.send("checkout complete")
+//  })
 
 // start and listen on the Express server
 app.listen(port, () => {

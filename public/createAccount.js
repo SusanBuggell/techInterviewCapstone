@@ -4,6 +4,7 @@ let firstName = document.createElement('input')
 firstName.setAttribute ("type","text")
 firstName.setAttribute ("class","flex-item")
 firstName.setAttribute("id", "firstName")
+// labelFirstName.append(firstName)
 labelFirstName.append(firstName)
 formCreateUser.append(labelFirstName)
 // value.appendChild(firstName);
@@ -79,7 +80,7 @@ requestStates.onload = function() {
       option.text = data[i].name;
     //   option.value = data[i].abbreviation;
       dropdownState.add(option);
-    }
+    }   
    } else {
     // Reached the server, but it returned an error
   }   
@@ -197,6 +198,8 @@ requestGenders.onerror = function() {
 
 requestGenders.send();
 
+
+
 let createAccount = document.createElement('button')
 createAccount.setAttribute("class", "btn btn-info")
 createAccount.setAttribute("type", "submit")
@@ -205,18 +208,39 @@ createAccount.innerText = "Create User Account"
 formCreateUser.append(createAccount)
 // createAccount.setAttribute("href", "http://localhost:3000/checkout")
 
+
+
+
+createAccount.onclick = function(event){
+    
+    event.preventDefault()
+    
 let vfirstName = document.getElementById("firstName").value
+
+console.log(`first name: ${vfirstName}`)
+
 let vlastName = document.getElementById("lastName").value
+console.log(`last name: ${vlastName}`)
 let vemail = document.getElementById("email").value
+console.log(`email: ${vemail}`)
 let vstreetAddress = document.getElementById("streetAddress").value
+console.log(`street address: ${vstreetAddress}`)
 let vcity = document.getElementById("city").value
+console.log(`city: ${vcity}`)
 let vstateProvince = document.getElementById("stateProvince").value
+console.log(`state provinve: ${vstateProvince}`)
 let vcountry = document.getElementById("country").value
+console.log(`country: ${vcountry}`)
 let vzipPostalCode = document.getElementById("zipPostalCode").value
+console.log(`zip postal: ${vzipPostalCode}`)
 let vDOB = document.getElementById("DOB").value
+console.log(`DOB: ${vDOB}`)
 let vgender = document.getElementById("gender").value
-createAccount.onclick = function(){
+console.log(`gender: ${vgender}`)
+
+    
     axios.post('http://localhost:3000/createaccount', {
+       
         firstName:vfirstName,
         lastName:vlastName,
         email:vemail,
@@ -226,7 +250,6 @@ createAccount.onclick = function(){
         zipPostalCode:vzipPostalCode,DOB:vDOB,
         gender:vgender
     }) 
-
 }
 
 
