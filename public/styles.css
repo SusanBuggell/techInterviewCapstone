@@ -36,6 +36,12 @@ h3{
 h4{
   text-align: center;
 }
+input{
+  width:75vw  ;
+}
+select{
+  width:75vw;
+}
 
 #productContainer {
   width: 95%;
@@ -82,9 +88,13 @@ h4{
   flex-direction:row;
   justify-content: space-evenly;
 }
-#formCreateUser> .flex-item{
-  display:flex;
+.flex-container>#formCreateUser{
+  display:inline-flex;
   flex-direction:column;
+}
+#formCreateUser>label{
+  display:inline-flex;
+  justify-content: space-between;
 }
 
 .flex-container {
@@ -106,6 +116,7 @@ h4{
   border-radius: 20px;
   
 }
+
 button{
   width: 20vw;
 }
@@ -118,6 +129,7 @@ button{
   background-color:royalblue;
   color:floralwhite;
 }
+
 #shoppingcart{
 text-align: center;
 }

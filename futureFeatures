@@ -5,17 +5,22 @@ app.post("/removefromcart", (req,res)=>{
   const id = req.body.id
   const item = req.body.item
   const amount = req.body.amount
-  total -= parseInt(amount)
-  console.log("cart items",cartItems)
-  const index = events.findIndex(element => element.id === item);
-  // let removeItem = events.lastIndexOf(item)
-  console.log("remove item index", index)
-  cartItems.splice(index,1)
-  location.reload()
-  console.log("Cart items after: ", cartItems)
-  console.log("index" , index)
-  console.log(total)
-  console.log(id, amount)
+  
+  removeItemFromCart(item)=>{
+
+        total -= parseInt(amount)
+        console.log("cart items",cartItems)
+        const index = events.findIndex(element => element.id === item);
+        let removeItem = events.lastIndexOf(item)
+        console.log("remove item index", index)
+        cartItems.splice(index,1)
+        location.reload()
+      
+        console.log("index" , index)
+        console.log("removed id", id, "removed amount", amount)
+        console.log("updated total", total)
+        console.log("Cart items after: ", cartItems)
+  }
 
 cart.js file
     let removeFromCart = document.createElement('button')
@@ -27,11 +32,5 @@ cart.js file
     location.reload()
     }
     removeFromCart.innerText = "Remove Item"
-    priceContainer.append(removeFromCart)
-    res.send('Cart add hit successfully.')
-    const amount = req.body.amount
-    const item = req.body.item
-    const id = cartItems + 1
-    total += parseInt(amount)
-    cartItems.push({id, item, amount})
-    console.log(item + total)
+    # priceContainer.append(removeFromCart)
+  

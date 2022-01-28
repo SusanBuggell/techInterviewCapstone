@@ -5,6 +5,7 @@ axios.get('./public/products/exerciseProducts.JSON')
 
     //create multi product container
     let container = document.getElementById('productContainer')
+    
     let productContainer = document.createElement('div')
 
     //create container for product

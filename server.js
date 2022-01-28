@@ -1,8 +1,10 @@
 const express = require("express");
-const sgMail = require('@sendgrid/mail')
+const cors = require('cors')
+// const sgMail = require('@sendgrid/mail')
 const app = express();
 const port = 3000;
 
+app.use(cors());
 app.use(express.json());
 app.use('/public', express.static('public'));
 //default folder for searching for files
@@ -14,9 +16,16 @@ app.use('/public', express.static('public'));
 
 let total = 0
 let cartItems = []
+let users=[]
 let returnedTotal = toString(total)
 
 //send back root domain .html file
+
+// app.all('/', (req, res) =>{
+//   res.header("Access-Control-Allow-Origin", "*");
+//   res.header("Access-Control-Allow-Headers", "X-Requested-With");
+//   next()
+// });
 
 app.get('/', (req,res) =>{
   res.sendFile(__dirname + '/index.html');
@@ -65,26 +74,49 @@ app.post("/addtocart", (req, res) => {
    )
    console.log(`getcart total: ${total}`)
  })
+ 
+ app.get('/createAccountForm', (req,res) =>{
+  res.sendFile(__dirname + '/createAccount.html');
+  console.log('CreateAccount page hit successfully.')
+});
 
- app.get("/checkout", (req, res)=>{
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY)
-  const msg = {
-    to: 'susan.buggell@gmail.com', // Change to your recipient
-    from: 'sbuggell@gmail.com', // Change to your verified sender
-    subject: 'Sending with SendGrid is Fun',
-    text: 'and easy to do anywhere, even with Node.js',
-    html: `Thank you for your order.  Your total is $ ${total}`,
-  }
-  
-  sgMail
-    .send(msg)
-    .then(()=>{
-      console.log(`Email sent`)
-    })
-    .catch((error) => {
-      console.error(error)
-    })
-    res.send("checkout complete")
+app.post("/createaccount", (req, res) => {
+  res.send('Create account add hit successfully.')
+  const firstName = req.body.firstName
+  const lastName= req.body.lastName
+  const email=req.body.email
+  const streetAddress = req.body.streetAddress
+  const city = req.body.city
+  const stateProvince = req.body.stateProvince
+  const country = req.body.country
+  const zipPostalCode = req.body.zipPostalCode
+  const DOB = req.body.DOB
+  const gender = req.body.gender
+  users.push({firstName,lastName,email,streetAddress,city,stateProvince,country,zipPostalCode,DOB,gender})
+  console.log(users)
+   }
+ )
+
+app.get("/checkout", (req, res) =>{
+    
+  const sgMail = require('@sendgrid/mail')
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+    const msg = {
+      to: 'susan.buggell@gmail.com', // Change to your recipient
+      from: 'sbuggell@gmail.com', // Change to your verified sender
+      subject: 'Self-Care Sanctuary Order Confirmation',
+      text: 'Thank you for your Order',
+      html: 'localhost:3000',
+    }
+    sgMail
+      .send(msg)
+      .then(() => {
+        console.log('Email sent')
+      })
+      .catch((error) => {
+         console.error(error)
+      })
+  // res.send("checkout complete")
  })
 
 // start and listen on the Express server
